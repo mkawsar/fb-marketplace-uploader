@@ -9,8 +9,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 chrome.action.onClicked.addListener((tab) => {
-    console.log('test');
-    
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
         files: ["content.js"]
